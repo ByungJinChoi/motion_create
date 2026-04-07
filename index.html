@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>XROBO AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:#0b1220;
+      color:#e5e7eb;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:16px;
+    }
+    .wrap{
+      width:100%;
+      max-width:960px;
+    }
+    header{
+      text-align:center;
+      margin-bottom:24px;
+    }
+    header h1{
+      font-size:28px;
+      letter-spacing:1px;
+    }
+    header p{
+      margin-top:6px;
+      font-size:14px;
+      color:#9ca3af;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+      gap:16px;
+    }
+    @media (max-width:768px){
+      .grid{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+    }
+    .card{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:16px;
+      border-radius:14px;
+      background:linear-gradient(145deg,#111827,#020617);
+      border:1px solid #1f2937;
+      box-shadow:0 10px 25px rgba(0,0,0,.45);
+      text-decoration:none;
+      color:#e5e7eb;
+      font-size:16px;
+      font-weight:600;
+      transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+      min-height:90px;
+    }
+    .card span{
+      display:block;
+      line-height:1.4;
+    }
+    .card strong{
+      display:block;
+      font-size:18px;
+      margin-bottom:4px;
+      color:#38bdf8;
+    }
+    .card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 16px 40px rgba(0,0,0,.6);
+      border-color:#38bdf8;
+    }
+    .card.disabled{
+      cursor:default;
+      opacity:0.7;
+      border-style:dashed;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>XROBO AI</h1>
+      <p>로봇 제어를 위한 AI 도구 모음 페이지</p>
+    </header>
+
+    <main class="grid">
+      <!-- 1. 라이브 코딩 -->
+      <a class="card" href="xrobo_main.html" target="_blank" rel="noopener">
+        <span>
+          <strong>라이브 코딩</strong>
+          실시간 블록 코딩 &amp; BLE 제어
+        </span>
+      </a>
+
+      <!-- 2. 색상 감별 -->
+      <a class="card" href="color_eye.html" target="_blank" rel="noopener">
+        <span>
+          <strong>색상 감별</strong>
+          카메라로 색을 읽고 제어하기
+        </span>
+      </a>
+
+      <!-- 3. 음성 명령 -->
+      <a class="card" href="voice_control.html" target="_blank" rel="noopener">
+        <span>
+          <strong>음성 명령</strong>
+          “안녕”처럼 말로 제어하기
+        </span>
+      </a>
+
+      <!-- 4. 자이로 리모컨 -->
+      <a class="card" href="gyro_control.html" target="_blank" rel="noopener">
+        <span>
+          <strong>자이로 리모컨</strong>
+          기울기로 로봇 조종하기
+        </span>
+      </a>
+
+      <!-- 5. 공따라가기 -->
+      <a class="card" href="vision_ball.html" target="_blank" rel="noopener">
+        <span>
+          <strong>공따라가기</strong>
+          카메라로 공을 추적해 이동
+        </span>
+      </a>
+
+      <!-- 6. 라인따라가기 -->
+      <a class="card" href="vision_line.html" target="_blank" rel="noopener">
+        <span>
+          <strong>라인따라가기</strong>
+          카메라로 라인 인식 주행
+        </span>
+      </a>
+
+      <!-- 7. 숫자 읽기 -->
+      <a class="card" href="number_eye.html" target="_blank" rel="noopener">
+        <span>
+          <strong>숫자 읽기</strong>
+          카드의 숫자를 인식해 제어
+        </span>
+      </a>
+
+      <!-- 8. 손동작 읽기 -->
+      <a class="card" href="vision_hand.html" target="_blank" rel="noopener">
+        <span>
+          <strong>손동작 읽기</strong>
+          손 제스처로 로봇과 대화
+        </span>
+      </a>
+
+      <!-- 9. 얼굴 인식 -->
+      <a class="card" href="Face_Track.html" target="_blank" rel="noopener">
+        <span>
+          <strong>얼굴 인식</strong>
+          카메라로 얼굴을 인식해 제어
+        </span>
+      </a>
+
+      <!-- 10. 표정 인식 -->
+      <a class="card" href="Face_Emotion.html" target="_blank" rel="noopener">
+        <span>
+          <strong>표정 인식</strong>
+          표정을 분석해 상태를 인식
+        </span>
+      </a>
+
+      <!-- 11. 몸동작 읽기 -->
+      <a class="card" href="vision_body.html" target="_blank" rel="noopener">
+        <span>
+          <strong>몸동작 읽기</strong>
+          몸의 자세와 동작을 인식해 제어
+        </span>
+      </a>
+
+      <!-- 12. 카드 읽기 -->
+      <a class="card" href="vision_card.html" target="_blank" rel="noopener">
+        <span>
+          <strong>카드 읽기</strong>
+          카메라로 카드를 읽고 제어하기
+        </span>
+      </a>
+    </main>
+  </div>
+</body>
+</html>
